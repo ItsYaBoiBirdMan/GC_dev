@@ -33,6 +33,6 @@ async function draw() {
     }
 }
 
-function changeBG() {
+function changeCard() {
    
 }

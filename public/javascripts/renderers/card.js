@@ -13,4 +13,6 @@ class Card{
     draw() {
         text(this.card_name, x, 100, 70, 50);
     }
+    setCard(card) { this.card = card; }
+    getCard() { return this.card; }
 }
