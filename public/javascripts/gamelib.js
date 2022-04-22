@@ -22,8 +22,8 @@ async function draw() {
     if (cards) 
     for (let card of cards) {
         text(card.card_name, x, 100, 70, 50);
-        text(card.card_hp, x, 150,70,50);
-        text(card.card_atk,x + 20,150,70,50)
+        text(card.card_hp, x + 20, 150,70,50);
+        text(card.card_atk,x ,150,70,50)
         x+=80
     }
 }
