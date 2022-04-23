@@ -8,4 +8,16 @@ router.get('/', async function(req, res, next) {
     res.status(result.status).send(result.result);
 });
 
+router.get('/', async function(req, res, next) {
+    console.log("Cards attacked")
+    let result = await cModel.attackCards();
+    res.status(result.status).send(result.result);
+});
+
+router.get('/', async function(req, res, next) {
+    console.log("Cards reset")
+    let result = await cModel.resetCards();
+    res.status(result.status).send(result.result);
+});
+
 module.exports = router;

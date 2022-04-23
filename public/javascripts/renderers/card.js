@@ -3,9 +3,7 @@ const imgRelWidth = 0.6;
 const textCenterVertical = 0.8;
 
 class Card{
-    constructor(width,height,x,y,card) {
-        this.width = width;
-        this.height = height;
+    constructor(x, y, card) {
         this.x = x;
         this.y = y;
         this.card = card;

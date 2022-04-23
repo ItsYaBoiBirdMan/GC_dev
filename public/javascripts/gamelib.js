@@ -1,9 +1,10 @@
 
-const width = 1000;
+const width = 1425;
 const height = 400;
 
-var cards;
-var button
+var cards
+var buttonAttack
+var buttonReset
 
 /*
 function preload() {
@@ -17,9 +18,12 @@ async function setup() {
     var canvas = createCanvas(width, height);
     canvas.parent('game');
     cards = await getCards();
-    button = createButton('Pawn 1')
-    button.position(100, 400)
-    button.mousePressed()
+    buttonAttack = createButton('Attack')
+    buttonAttack.position(100, 400)
+    buttonAttack.mousePressed(AttackCards)
+    buttonReset = createButton('Reset')
+    buttonReset.position(200, 400)
+    buttonReset.mousePressed(ResetCards)
 }
 async function draw() {
     background(220);
@@ -27,12 +31,22 @@ async function draw() {
     if (cards) 
     for (let card of cards) {
         text(card.card_name, x, 100, 70, 50);
-        text(card.card_hp, x + 20, 150, 70,50);
+        text('ATK', x - 7, 135, 70, 50)
+        text('HP', x + 27, 135, 70, 50)
+        text(card.card_hp, x + 30, 150, 70,50);
         text(card.card_atk, x, 150, 70, 50)
-        x+=80
+        x+=100
     }
 }
 
-function changeCard() {
-   
+function AttackCards() {
+    for (let card of cards) {
+        card.card_hp -= 1
+    }
+}
+
+function ResetCards(){
+    for (let card of cards) {
+        card.card_hp += 1
+    }
 }
