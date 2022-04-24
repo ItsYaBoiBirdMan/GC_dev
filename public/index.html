@@ -4,6 +4,8 @@
   <title>Express</title>
   <link rel="stylesheet" href="/stylesheets/style.css">
   <script src="./javascripts/requests/cardRequests.js"></script>
+  <script src="./javascripts/requests/attackRequest.js"></script>
+  <script src="./javascripts/requests/restoreRequest.js"></script>
   <script src="./javascripts/p5.min.js"></script>
   <script src="./javascripts/renderers/card.js"></script>
   <script src="./javascripts/gamelib.js"></script>
@@ -14,6 +16,8 @@
   <header>
   <h1>Hellisium</h1>
   <p>Digital Game Prototype</p>
+  <input type="button" value="Attack" onclick="attackCards(), window.location.reload()">
+  <input type="button" value="Restore" onclick="restoreCards(), window.location.reload()">
 </header>
   <main id="game"></main>
 </body>

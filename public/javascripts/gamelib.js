@@ -3,21 +3,11 @@ const width = 1425;
 const height = 400;
 
 var cards
-var attack
-var restore
-var buttonAttack
-var buttonReset
 
 async function setup() {
     var canvas = createCanvas(width, height);
     canvas.parent('game');
     cards = await getCards();
-    buttonAttack = createButton('Attack')
-    buttonAttack.position(100, 400)
-    buttonAttack.mousePressed()
-    buttonReset = createButton('Restore')
-    buttonReset.position(200, 400)
-    buttonReset.mousePressed()
 }
 async function draw() {
     background(220);
