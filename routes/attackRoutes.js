@@ -1,10 +1,10 @@
 var express = require('express');
 var router = express.Router();
-var cModel = require("../models/cardsModel");
+var aModel = require("../models/attackModel.js");
             
 router.get('/', async function(req, res, next) {
-    console.log("Get all cards")
-    let result = await cModel.getAllCards();
+    console.log("Attacked all cards")
+    let result = await aModel.attackAllCards();
     res.status(result.status).send(result.result);
 });
 

@@ -7,6 +7,8 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var cardsRouter = require('./routes/cardsRoutes');
+var attackRouter = require('./routes/attackRoutes')
+var restoreRouter = require('./routes/restoreRoutes')
 
 var app = express();
 
@@ -19,5 +21,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/api/cards',cardsRouter);
+app.use('/api/attack', attackRouter);
+app.use('/api/restore', restoreRouter);
 
 module.exports = app;
