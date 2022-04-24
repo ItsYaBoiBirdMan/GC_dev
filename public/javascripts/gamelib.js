@@ -8,26 +8,16 @@ var restore
 var buttonAttack
 var buttonReset
 
-/*
-function preload() {
-    BoardManager.preloadImages();
-    boardMan = new BoardManager(width,height,0,0,room);
-    boardMan.initBoard();
-}
-*/
-
 async function setup() {
     var canvas = createCanvas(width, height);
     canvas.parent('game');
     cards = await getCards();
-    attack = await attackCards()
-    restore = await restoreCards()
     buttonAttack = createButton('Attack')
     buttonAttack.position(100, 400)
-    buttonAttack.mousePressed(attack)
-    buttonReset = createButton('Reset')
+    buttonAttack.mousePressed()
+    buttonReset = createButton('Restore')
     buttonReset.position(200, 400)
-    buttonReset.mousePressed(restore)
+    buttonReset.mousePressed()
 }
 async function draw() {
     background(220);
@@ -40,17 +30,5 @@ async function draw() {
         text(card.card_hp, x + 30, 150, 70,50);
         text(card.card_atk, x, 150, 70, 50)
         x+=100
-    }
-}
-
-function AttackCards() {
-    for (let card of cards) {
-        card.card_hp -= 1
-    }
-}
-
-function ResetCards(){
-    for (let card of cards) {
-        card.card_hp += 1
     }
 }
