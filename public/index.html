@@ -9,16 +9,15 @@
   <script src="./javascripts/p5.min.js"></script>
   <script src="./javascripts/renderers/card.js"></script>
   <script src="./javascripts/gamelib.js"></script>
-  
 </head>
 
 <body>
   <header>
   <h1>Hellisium</h1>
   <p>Digital Game Prototype</p>
-  <input type="button" value="Attack" onclick="attackCards(), window.location.reload()">
-  <input type="button" value="Restore" onclick="restoreCards(), window.location.reload()">
-</header>
+  </header>
+  <button name="button" class="btnAtkStyle" type="button" onclick="attackCards(), window.location.reload()">Attack</button>
+  <button name="button" class="btnResStyle" type="button" onclick="restoreCards(), window.location.reload()">Restore</button>
   <main id="game"></main>
 </body>
 

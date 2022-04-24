@@ -6,14 +6,19 @@ body {
 a {
   color: #00B7FF;
 }
-.btnStyle {
-  border-radius: 4px;
-  border: medium solid #000000;
-  background-color:rgb(92, 250, 246);
-  font-family: "Arial", Impact, Charcoal, sans-serif;
-  font-weight: bold;
-  font-size:20px;
-  color: #ffffff;
-  padding: 5px 30px;
+.btnAtkStyle {
+  top:50%;
+  left:0%;
+  position: absolute;
+  padding: 5px 20px;
   margin:8px 70px;
 }
+
+.btnResStyle {
+  top:50%;
+  left:7%;
+  position: absolute;
+  padding: 5px 20px;
+  margin:8px 70px;
+}
+
